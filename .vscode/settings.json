@@ -1,0 +1,9 @@
+{
+  "dbt.dbtPath": "/Users/amruth/.local/bin/dbt",
+  "dbt.dbtPythonPath": "/usr/bin/python3",
+  "dbt.dbtProjectRootPath": "/Users/amruth/dbtfundamentals",
+  "dbt.enableQueryTemplate": true,
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  }
+}
