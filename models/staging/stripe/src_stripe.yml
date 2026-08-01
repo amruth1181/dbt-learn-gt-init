@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: amruthpay
+    database: project-790bf549-e3d5-4067-a00
+    schema: amruth
+    tables:
+      - name: payments
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

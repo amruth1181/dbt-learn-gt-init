@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: amruthdb
+    database: project-790bf549-e3d5-4067-a00
+    schema: amruth
+    tables:
+      - name: customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: status
+            tests:
+              - accepted_values:
+                  arguments:
+                    values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+        config:
+          freshness:
+            warn_after:
+              count: 24
+              period: hour
+            error_after:
+              count: 48
+              period: hour
